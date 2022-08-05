@@ -1,13 +1,21 @@
-import { useState } from 'react';
+import {   useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogoTitle from '../../assets/images/logo-s.png'
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
+import '../AnimatedLetters/index.scss';
+import Logo from './Logo';
 
 const Home = () => {
-    const [letterClass, setLetterClass] = useState('text-animate');
+    const [letterClass ] = useState('text-animate');//setLetterClass
     const nameArray = ['a','v', 'i', 'e','r' ]
     const jobArray = ['d','é', 'v','e','l','o','p','p','e','u','r',' ','w','e','b']
+
+    // useEffect(() => {
+    //     return setTimeout(() => {
+    //         setLetterClass('text-animate-hover')
+    //     }, 4000)
+    // }, [])
 
     return (
         <div className="container home-page">
@@ -21,14 +29,14 @@ const Home = () => {
                     <span className={`${letterClass} _16 `}>u</span> 
                     <span className={`${letterClass} _17 `}>r</span> 
                 <br />  
-                <span className={`${letterClass} _18 `}>J</span> 
-                <span className={`${letterClass} _19 `}>e</span>
-                <span className={`${letterClass} _20 `}> </span> 
-                <span className={`${letterClass} _21 `}>s</span> 
-                <span className={`${letterClass} _22 `}>u</span> 
-                <span className={`${letterClass} _23 `}>i</span> 
-                <span className={`${letterClass} _24 `}>s</span> 
-                <img  src={LogoTitle} alt="developer"/>
+                    <span className={`${letterClass} _18 `}>J</span> 
+                    <span className={`${letterClass} _19 `}>e</span>
+                    <span className={`${letterClass} _20 `}> </span> 
+                    <span className={`${letterClass} _21 `}>s</span> 
+                    <span className={`${letterClass} _22 `}>u</span> 
+                    <span className={`${letterClass} _23 `}>i</span> 
+                    <span className={`${letterClass} _24 `}>s</span> 
+                    <img  src={LogoTitle} alt="developer"/>
                <AnimatedLetters letterClass={letterClass} 
                strArray={nameArray}
                idx = {12} />
@@ -37,10 +45,10 @@ const Home = () => {
                strArray={jobArray}
                idx = {21} />
                 </h1>
-                <h2>A la recherche d'un Alternance </h2>
+                <h2>A la recherche d'une Alternance </h2>
                 <Link to="/contact" className='flat-button' > Contactez-moi </Link>
             </div>
-
+            <Logo />
         </div>
     );
 
