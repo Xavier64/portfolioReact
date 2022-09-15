@@ -40,7 +40,7 @@ const Contact = () => {
                           />
                     </h1>
                     <p>
-                       Je suis intéréssé par toutes les opportunités et tout les domaines d'activités.
+                       Je suis intéressé par toutes les opportunités et tous les domaines d'activité.
                        Je suis disponible à tout moment, si vous avez une question ou une demande n'hésitez pas
                        à me contacter!! 
                     </p>
