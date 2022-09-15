@@ -1,10 +1,32 @@
 import Loader from 'react-loaders';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 const Contact = () => {
-
     const [LetterClass] = useState('text-animate');
+    const refForm =useRef()
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs.sendForm(
+            'gmail',
+            'template_3f3b1fd',
+            refForm.current,
+            'cDmk125gKIO5s3h2e'
+        )
+        .then(
+            () => {
+                alert('Le message a été bien envoyé!!')
+                window.location.reload(false)
+            },
+            () => {
+                alert("Vôtre message n'a pas été envoyé, réessayer s'il vous plait")
+            }
+        )
+    }
+
     return (
         <>
             <div className='container contact-page' >
@@ -22,7 +44,7 @@ const Contact = () => {
                        à me contacter!! 
                     </p>
                     <div className='contact-form'>
-                        <form>
+                        <form ref={refForm} onSubmit={sendEmail} >
                             <ul>
                                 <li className='half' >
                                     <input type="text" name="name" placeholder='Name' required />

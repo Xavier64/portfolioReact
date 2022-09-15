@@ -10,7 +10,7 @@ const Home = () => {
     const [letterClass ] = useState('text-animate');//setLetterClass
     const nameArray = ['a','v', 'i', 'e','r' ]
     const jobArray = ['d','é', 'v','e','l','o','p','p','e','u','r',' ','w','e','b']
-
+    const welcomeArray = ['B','o','n','j','o','u','r',' ', 'j','e',' ','s','u','i','s'] 
     // useEffect(() => {
     //     return setTimeout(() => {
     //         setLetterClass('text-animate-hover')
@@ -21,7 +21,10 @@ const Home = () => {
         <div className="container home-page">
             <div className="text-zone">
                 <h1> 
-                    <span className={letterClass}>B</span> 
+                <AnimatedLetters letterClass={letterClass} 
+               strArray={welcomeArray}
+               idx = {1} />
+                    {/* <span className={letterClass}>B</span> 
                     <span className={`${letterClass} _12 `}>o</span> 
                     <span className={`${letterClass} _13 `}>n</span> 
                     <span className={`${letterClass} _14 `}>j</span> 
@@ -35,7 +38,7 @@ const Home = () => {
                     <span className={`${letterClass} _21 `}>s</span> 
                     <span className={`${letterClass} _22 `}>u</span> 
                     <span className={`${letterClass} _23 `}>i</span> 
-                    <span className={`${letterClass} _24 `}>s</span> 
+                    <span className={`${letterClass} _24 `}>s</span>  */}
                     <img  src={LogoTitle} alt="developer"/>
                <AnimatedLetters letterClass={letterClass} 
                strArray={nameArray}

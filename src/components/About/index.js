@@ -31,7 +31,7 @@ const About = () => {
                 <p>j’effectue ma formation à La Fabrique du Numérique de Pau. </p>
                 <p>J’ai 34 ans et je suis actuellement à la recherche d’une alternance </p>
                 <p>pour continuer mes études afin de devenir Concepteur développeur d’application. </p>
-                <p>J’ai travaillé dans plusieurs domaine les plus intéressant étant le médicales et bien sur le développement d’application.</p>
+                <p>J’ai travaillé dans plusieurs domaine les plus intéressants étant le médicale et bien sur le développement d’application.</p>
             </div>
             <div className='stage-cube-cont'>
                 <div className='cubespinner' >
